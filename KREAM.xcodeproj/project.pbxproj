@@ -1,0 +1,574 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		CBDF1A072CDB6BEC00951040 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CBDF19E52CDB6BEA00951040 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CBDF19EC2CDB6BEA00951040;
+			remoteInfo = KREAM;
+		};
+		CBDF1A112CDB6BEC00951040 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CBDF19E52CDB6BEA00951040 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CBDF19EC2CDB6BEA00951040;
+			remoteInfo = KREAM;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CBDF19ED2CDB6BEA00951040 /* KREAM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KREAM.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBDF1A062CDB6BEC00951040 /* KREAMTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KREAMTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBDF1A102CDB6BEC00951040 /* KREAMUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KREAMUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		CBDF1A182CDB6BEC00951040 /* Exceptions for "KREAM" folder in "KREAM" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = CBDF19EC2CDB6BEA00951040 /* KREAM */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		CBDF19EF2CDB6BEA00951040 /* KREAM */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				CBDF1A182CDB6BEC00951040 /* Exceptions for "KREAM" folder in "KREAM" target */,
+			);
+			path = KREAM;
+			sourceTree = "<group>";
+		};
+		CBDF1A092CDB6BEC00951040 /* KREAMTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = KREAMTests;
+			sourceTree = "<group>";
+		};
+		CBDF1A132CDB6BEC00951040 /* KREAMUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = KREAMUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CBDF19EA2CDB6BEA00951040 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBDF1A032CDB6BEC00951040 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBDF1A0D2CDB6BEC00951040 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CBDF19E42CDB6BEA00951040 = {
+			isa = PBXGroup;
+			children = (
+				CBDF19EF2CDB6BEA00951040 /* KREAM */,
+				CBDF1A092CDB6BEC00951040 /* KREAMTests */,
+				CBDF1A132CDB6BEC00951040 /* KREAMUITests */,
+				CBDF19EE2CDB6BEA00951040 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CBDF19EE2CDB6BEA00951040 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CBDF19ED2CDB6BEA00951040 /* KREAM.app */,
+				CBDF1A062CDB6BEC00951040 /* KREAMTests.xctest */,
+				CBDF1A102CDB6BEC00951040 /* KREAMUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CBDF19EC2CDB6BEA00951040 /* KREAM */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CBDF1A192CDB6BEC00951040 /* Build configuration list for PBXNativeTarget "KREAM" */;
+			buildPhases = (
+				CBDF19E92CDB6BEA00951040 /* Sources */,
+				CBDF19EA2CDB6BEA00951040 /* Frameworks */,
+				CBDF19EB2CDB6BEA00951040 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				CBDF19EF2CDB6BEA00951040 /* KREAM */,
+			);
+			name = KREAM;
+			packageProductDependencies = (
+			);
+			productName = KREAM;
+			productReference = CBDF19ED2CDB6BEA00951040 /* KREAM.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CBDF1A052CDB6BEC00951040 /* KREAMTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CBDF1A1E2CDB6BEC00951040 /* Build configuration list for PBXNativeTarget "KREAMTests" */;
+			buildPhases = (
+				CBDF1A022CDB6BEC00951040 /* Sources */,
+				CBDF1A032CDB6BEC00951040 /* Frameworks */,
+				CBDF1A042CDB6BEC00951040 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CBDF1A082CDB6BEC00951040 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				CBDF1A092CDB6BEC00951040 /* KREAMTests */,
+			);
+			name = KREAMTests;
+			packageProductDependencies = (
+			);
+			productName = KREAMTests;
+			productReference = CBDF1A062CDB6BEC00951040 /* KREAMTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CBDF1A0F2CDB6BEC00951040 /* KREAMUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CBDF1A212CDB6BEC00951040 /* Build configuration list for PBXNativeTarget "KREAMUITests" */;
+			buildPhases = (
+				CBDF1A0C2CDB6BEC00951040 /* Sources */,
+				CBDF1A0D2CDB6BEC00951040 /* Frameworks */,
+				CBDF1A0E2CDB6BEC00951040 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CBDF1A122CDB6BEC00951040 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				CBDF1A132CDB6BEC00951040 /* KREAMUITests */,
+			);
+			name = KREAMUITests;
+			packageProductDependencies = (
+			);
+			productName = KREAMUITests;
+			productReference = CBDF1A102CDB6BEC00951040 /* KREAMUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CBDF19E52CDB6BEA00951040 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1610;
+				LastUpgradeCheck = 1610;
+				TargetAttributes = {
+					CBDF19EC2CDB6BEA00951040 = {
+						CreatedOnToolsVersion = 16.1;
+					};
+					CBDF1A052CDB6BEC00951040 = {
+						CreatedOnToolsVersion = 16.1;
+						TestTargetID = CBDF19EC2CDB6BEA00951040;
+					};
+					CBDF1A0F2CDB6BEC00951040 = {
+						CreatedOnToolsVersion = 16.1;
+						TestTargetID = CBDF19EC2CDB6BEA00951040;
+					};
+				};
+			};
+			buildConfigurationList = CBDF19E82CDB6BEA00951040 /* Build configuration list for PBXProject "KREAM" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CBDF19E42CDB6BEA00951040;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = CBDF19EE2CDB6BEA00951040 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CBDF19EC2CDB6BEA00951040 /* KREAM */,
+				CBDF1A052CDB6BEC00951040 /* KREAMTests */,
+				CBDF1A0F2CDB6BEC00951040 /* KREAMUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CBDF19EB2CDB6BEA00951040 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBDF1A042CDB6BEC00951040 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBDF1A0E2CDB6BEC00951040 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CBDF19E92CDB6BEA00951040 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBDF1A022CDB6BEC00951040 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBDF1A0C2CDB6BEC00951040 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CBDF1A082CDB6BEC00951040 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CBDF19EC2CDB6BEA00951040 /* KREAM */;
+			targetProxy = CBDF1A072CDB6BEC00951040 /* PBXContainerItemProxy */;
+		};
+		CBDF1A122CDB6BEC00951040 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CBDF19EC2CDB6BEA00951040 /* KREAM */;
+			targetProxy = CBDF1A112CDB6BEC00951040 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		CBDF1A1A2CDB6BEC00951040 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = X7TYNR98TC;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = KREAM/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kr.ac.indck.hyun.KREAM;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CBDF1A1B2CDB6BEC00951040 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = X7TYNR98TC;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = KREAM/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kr.ac.indck.hyun.KREAM;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CBDF1A1C2CDB6BEC00951040 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CBDF1A1D2CDB6BEC00951040 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CBDF1A1F2CDB6BEC00951040 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = X7TYNR98TC;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kr.ac.indck.hyun.KREAMTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KREAM.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/KREAM";
+			};
+			name = Debug;
+		};
+		CBDF1A202CDB6BEC00951040 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = X7TYNR98TC;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kr.ac.indck.hyun.KREAMTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KREAM.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/KREAM";
+			};
+			name = Release;
+		};
+		CBDF1A222CDB6BEC00951040 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = X7TYNR98TC;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kr.ac.indck.hyun.KREAMUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = KREAM;
+			};
+			name = Debug;
+		};
+		CBDF1A232CDB6BEC00951040 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = X7TYNR98TC;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kr.ac.indck.hyun.KREAMUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = KREAM;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CBDF19E82CDB6BEA00951040 /* Build configuration list for PBXProject "KREAM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBDF1A1C2CDB6BEC00951040 /* Debug */,
+				CBDF1A1D2CDB6BEC00951040 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CBDF1A192CDB6BEC00951040 /* Build configuration list for PBXNativeTarget "KREAM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBDF1A1A2CDB6BEC00951040 /* Debug */,
+				CBDF1A1B2CDB6BEC00951040 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CBDF1A1E2CDB6BEC00951040 /* Build configuration list for PBXNativeTarget "KREAMTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBDF1A1F2CDB6BEC00951040 /* Debug */,
+				CBDF1A202CDB6BEC00951040 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CBDF1A212CDB6BEC00951040 /* Build configuration list for PBXNativeTarget "KREAMUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBDF1A222CDB6BEC00951040 /* Debug */,
+				CBDF1A232CDB6BEC00951040 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CBDF19E52CDB6BEA00951040 /* Project object */;
+}
