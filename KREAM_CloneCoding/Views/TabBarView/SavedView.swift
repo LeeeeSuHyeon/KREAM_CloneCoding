@@ -53,8 +53,8 @@ class SavedView: UIView {
         }
     }
     
-    public func config(viewModel : SavedViewModel) {
-        lblCount.text = "전체 \(viewModel.count)개"
+    public func config(viewData : SavedViewData) {
+        lblCount.text = "전체 \(viewData.count)개"
     }
     
     required init?(coder: NSCoder) {

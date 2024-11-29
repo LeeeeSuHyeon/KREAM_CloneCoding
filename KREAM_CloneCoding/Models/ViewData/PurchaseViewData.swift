@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-struct PurchaseViewModel {
+struct PurchaseViewData {
     let image : String
     let title : String
     let desription : String

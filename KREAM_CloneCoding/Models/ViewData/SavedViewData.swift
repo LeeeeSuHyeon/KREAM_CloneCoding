@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct SavedViewModel {
+struct SavedViewData {
     let count : Int
     
     init(count: Int) {

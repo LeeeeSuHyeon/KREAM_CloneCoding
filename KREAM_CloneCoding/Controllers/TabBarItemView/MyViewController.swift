@@ -9,11 +9,11 @@ import UIKit
 
 class MyViewController: UIViewController {
     let profileImage = "profile_image"
-    private lazy var viewModel : MyPageViewModel = {
+    private lazy var viewData : MyPageViewData = {
         let nickname = KeychainService.shared.load(account: "login", service: .nickname) ?? "닉네임 없음"
         print("MyViewController - nickname : \(nickname)")
-        let viewModel = MyPageViewModel(image: UIImage(named: profileImage) ?? .appleLogo, nickname: nickname, follower: 909, following: 909)
-        return viewModel
+        let viewData = MyPageViewData(image: UIImage(named: profileImage) ?? .appleLogo, nickname: nickname, follower: 909, following: 909)
+        return viewData
     }()
     
     private lazy var myPageView : MyPageView = {
@@ -24,7 +24,7 @@ class MyViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setAction()
-        myPageView.config(viewModel: viewModel)
+        myPageView.config(viewData: viewData)
         self.view = myPageView
     }
     

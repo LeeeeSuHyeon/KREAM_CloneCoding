@@ -9,7 +9,7 @@ import UIKit
 
 class SavedViewController: UIViewController {
     let datas = dummySavedCellData.datas
-    lazy var savedViewModel = SavedViewModel(count: datas.count)
+    lazy var savedViewData = SavedViewData(count: datas.count)
     
     private lazy var savedView : SavedView = {
         let view = SavedView()
@@ -19,7 +19,7 @@ class SavedViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setDataSource()
-        savedView.config(viewModel: savedViewModel)
+        savedView.config(viewData: savedViewData)
         self.view = savedView
     }
     

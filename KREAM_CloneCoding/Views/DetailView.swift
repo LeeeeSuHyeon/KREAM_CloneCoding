@@ -237,15 +237,15 @@ class DetailView: UIView {
         }
     }
     
-    public func config(viewModel : DetailViewModel) {
-        mainImgView.kf.setImage(with: URL(string: viewModel.image))
-        lblSaved.text = viewModel.savedCount
-        btnSaved.setImage(viewModel.isSaved ? .tabBarSelectedSaved : .tabBarSaved, for: .normal)
-        lblPrice.text = viewModel.price
-        lblItemName.text = viewModel.title
-        lblItemDescrption.text = viewModel.description
-        lblSellPrice.text = viewModel.sellPrice
-        lblPurchasePrice.text = viewModel.purchasePrice
+    public func config(viewData : DetailViewData) {
+        mainImgView.kf.setImage(with: URL(string: viewData.image))
+        lblSaved.text = viewData.savedCount
+        btnSaved.setImage(viewData.isSaved ? .tabBarSelectedSaved : .tabBarSaved, for: .normal)
+        lblPrice.text = viewData.price
+        lblItemName.text = viewData.title
+        lblItemDescrption.text = viewData.description
+        lblSellPrice.text = viewData.sellPrice
+        lblPurchasePrice.text = viewData.purchasePrice
     }
     
     public func setTopBorder() {

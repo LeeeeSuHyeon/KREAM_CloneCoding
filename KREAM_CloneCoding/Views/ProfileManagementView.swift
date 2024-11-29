@@ -73,10 +73,10 @@ class ProfileManagementView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    public func config(viewModel : ProfileManagementViewModel){
-        grpUserEmail.txtUserInfo.text = viewModel.id
-        grpUserPwd.txtUserInfo.text = viewModel.pwd
-        profileImgView.image = viewModel.image
+    public func config(viewData : ProfileManagementViewData){
+        grpUserEmail.txtUserInfo.text = viewData.id
+        grpUserPwd.txtUserInfo.text = viewData.pwd
+        profileImgView.image = viewData.image
     }
     
     public func changeId(idFlag : Bool){

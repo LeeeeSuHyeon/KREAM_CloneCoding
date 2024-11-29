@@ -9,13 +9,13 @@ import UIKit
 
 class PurchaseViewController: UIViewController {
     let item : HomeJustDropModel
-    let viewModel : PurchaseViewModel
+    let viewData : PurchaseViewData
     
     var selectedItemIndex : Int?
     
     init(item: HomeJustDropModel) {
         self.item = item
-        self.viewModel = PurchaseViewModel(item: item)
+        self.viewData = PurchaseViewData(item: item)
         
         super.init(nibName: nil, bundle: nil)
     }
@@ -28,7 +28,7 @@ class PurchaseViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        purchaseView.config(viewModel: viewModel)
+        purchaseView.config(viewData: viewData)
         view = purchaseView
         setDataSource()
         setAction()

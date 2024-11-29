@@ -10,10 +10,10 @@ import UIKit
 class DetailViewController: UIViewController {
     
     let item : HomeJustDropModel
-    var viewModel : DetailViewModel
+    var viewData : DetailViewData
     init(item: HomeJustDropModel) {
         self.item = item
-        self.viewModel = DetailViewModel(item: item)
+        self.viewData = DetailViewData(item: item)
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -22,7 +22,7 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view = detailView
-        detailView.config(viewModel: viewModel)
+        detailView.config(viewData: viewData)
         setDelegate()
         setAction()
     }

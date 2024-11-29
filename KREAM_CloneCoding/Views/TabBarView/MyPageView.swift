@@ -225,19 +225,19 @@ class MyPageView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    public func config(viewModel : MyPageViewModel){
-        profileImgView.image = viewModel.image
-        lblProfileName.text = viewModel.nickname
+    public func config(viewData : MyPageViewData){
+        profileImgView.image = viewData.image
+        lblProfileName.text = viewData.nickname
         
-         let followingText = "팔로잉 \(viewModel.follower)"
+         let followingText = "팔로잉 \(viewData.follower)"
          let followingAttributedText = NSMutableAttributedString(string: followingText)
-         followingAttributedText.addAttribute(.font, value: UIFont.systemFont(ofSize: 12, weight: .semibold), range: (followingText as NSString).range(of: viewModel.follower))
+         followingAttributedText.addAttribute(.font, value: UIFont.systemFont(ofSize: 12, weight: .semibold), range: (followingText as NSString).range(of: viewData.follower))
          lblFollower.attributedText = followingAttributedText
          
          
-         let followerText = "팔로워 \(viewModel.follower)"
+         let followerText = "팔로워 \(viewData.follower)"
          let followerAttributedText = NSMutableAttributedString(string: followerText)
-         followerAttributedText.addAttribute(.font, value: UIFont.systemFont(ofSize: 12, weight: .semibold), range: (followerText as NSString).range(of: viewModel.follower))
+         followerAttributedText.addAttribute(.font, value: UIFont.systemFont(ofSize: 12, weight: .semibold), range: (followerText as NSString).range(of: viewData.follower))
          lblFollowing.attributedText = followerAttributedText
     }
 

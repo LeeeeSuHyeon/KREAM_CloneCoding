@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-struct DetailViewModel {
+struct DetailViewData {
     let image : String
     let title : String
     let description : String

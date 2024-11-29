@@ -188,17 +188,17 @@ class PurchaseView: UIView {
         }
     }
     
-    public func config(viewModel : PurchaseViewModel){
-        imageView.kf.setImage(with: URL(string: viewModel.image))
-        lblItemName.text = viewModel.title
-        lblItemDescription.text = viewModel.desription
+    public func config(viewData : PurchaseViewData){
+        imageView.kf.setImage(with: URL(string: viewData.image))
+        lblItemName.text = viewData.title
+        lblItemDescription.text = viewData.desription
         
-        var attributedExpressTitle = AttributedString(viewModel.expressedDeliveryPrice)
+        var attributedExpressTitle = AttributedString(viewData.expressedDeliveryPrice)
         attributedExpressTitle.font = UIFont.systemFont(ofSize: 14, weight: .bold)
         btnExpressDelivery.configuration?.attributedTitle = attributedExpressTitle
         
         
-        var attributedNormalTitle = AttributedString(viewModel.normalDeliveryPrice)
+        var attributedNormalTitle = AttributedString(viewData.normalDeliveryPrice)
         attributedNormalTitle.font = UIFont.systemFont(ofSize: 14, weight: .bold)
         btnNormalDelivery.configuration?.attributedTitle = attributedNormalTitle
     }

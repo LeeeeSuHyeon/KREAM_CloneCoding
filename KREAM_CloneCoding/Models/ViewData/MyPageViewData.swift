@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-struct MyPageViewModel {
+struct MyPageViewData {
     let image : UIImage
     let nickname : String
     let follower : String

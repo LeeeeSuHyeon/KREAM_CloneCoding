@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-struct ProfileManagementViewModel {
+struct ProfileManagementViewData {
     let image : UIImage
     let id : String
     let pwd : String

@@ -9,7 +9,7 @@ import UIKit
 
 class ProfileManagementViewController: UIViewController {
     var profileImage : String
-    lazy var viewModel : ProfileManagementViewModel = ProfileManagementViewModel(image: UIImage(named: profileImage) ?? .appleLogo, id: id, pwd: pwd)
+    lazy var viewData : ProfileManagementViewData = ProfileManagementViewData(image: UIImage(named: profileImage) ?? .appleLogo, id: id, pwd: pwd)
     
     let userDefaluts = UserDefaultsModel()
     lazy var id = userDefaluts.loadData(key: "id") ?? ""
@@ -36,7 +36,7 @@ class ProfileManagementViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view = profileManagementView
-        profileManagementView.config(viewModel: viewModel)
+        profileManagementView.config(viewData: viewData)
         setNavigation()
         setAction()
     }
