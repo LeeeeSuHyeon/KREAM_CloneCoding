@@ -1,0 +1,12 @@
+//
+//  Config.xcconfig
+//  KREAM_CloneCoding
+//
+//  Created by 이수현 on 11/8/24.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+KakaoAPIKey = a94369fd44e4a3504a768bd00fafe56f
+KakaoAppKey = a03b4f18f3c14be24e7a0154f8f8ffb8

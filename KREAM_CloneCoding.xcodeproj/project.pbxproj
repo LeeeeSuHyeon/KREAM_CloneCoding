@@ -1,0 +1,487 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CB0F799B2CA930FF00622685 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = CB0F799A2CA930FF00622685 /* SnapKit */; };
+		CB0F7A0F2CABD2FB00622685 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = CB0F7A0E2CABD2FB00622685 /* Then */; };
+		CB280C392CDE09C00047DCF4 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = CB280C382CDE09C00047DCF4 /* Alamofire */; };
+		CB280C3E2CDE152A0047DCF4 /* KakaoSDKFriendResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CB280C3D2CDE152A0047DCF4 /* KakaoSDKFriendResources.bundle */; };
+		CB280C482CDE28210047DCF4 /* KakaoSDK in Frameworks */ = {isa = PBXBuildFile; productRef = CB280C472CDE28210047DCF4 /* KakaoSDK */; };
+		CB5C0C8E2CEF416F00C447DE /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = CB5C0C8D2CEF416F00C447DE /* Kingfisher */; };
+		CB8E183B2CE7682600B3B77F /* CombineMoya in Frameworks */ = {isa = PBXBuildFile; productRef = CB8E183A2CE7682600B3B77F /* CombineMoya */; };
+		CB8E183D2CE7682600B3B77F /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = CB8E183C2CE7682600B3B77F /* Moya */; };
+		CB8E183F2CE7682600B3B77F /* ReactiveMoya in Frameworks */ = {isa = PBXBuildFile; productRef = CB8E183E2CE7682600B3B77F /* ReactiveMoya */; };
+		CB8E18412CE7682600B3B77F /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = CB8E18402CE7682600B3B77F /* RxMoya */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		CB280C3D2CDE152A0047DCF4 /* KakaoSDKFriendResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = KakaoSDKFriendResources.bundle; sourceTree = "<group>"; };
+		CB90ECBB2CA18F53007D673B /* KREAM_CloneCoding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KREAM_CloneCoding.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		CB90ECCD2CA18F55007D673B /* Exceptions for "KREAM_CloneCoding" folder in "KREAM_CloneCoding" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = CB90ECBA2CA18F53007D673B /* KREAM_CloneCoding */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		CB90ECBD2CA18F53007D673B /* KREAM_CloneCoding */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				CB90ECCD2CA18F55007D673B /* Exceptions for "KREAM_CloneCoding" folder in "KREAM_CloneCoding" target */,
+			);
+			path = KREAM_CloneCoding;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CB90ECB82CA18F53007D673B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB8E183F2CE7682600B3B77F /* ReactiveMoya in Frameworks */,
+				CB280C392CDE09C00047DCF4 /* Alamofire in Frameworks */,
+				CB280C482CDE28210047DCF4 /* KakaoSDK in Frameworks */,
+				CB5C0C8E2CEF416F00C447DE /* Kingfisher in Frameworks */,
+				CB8E183D2CE7682600B3B77F /* Moya in Frameworks */,
+				CB0F799B2CA930FF00622685 /* SnapKit in Frameworks */,
+				CB8E183B2CE7682600B3B77F /* CombineMoya in Frameworks */,
+				CB8E18412CE7682600B3B77F /* RxMoya in Frameworks */,
+				CB0F7A0F2CABD2FB00622685 /* Then in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CB90ECB22CA18F53007D673B = {
+			isa = PBXGroup;
+			children = (
+				CB280C3D2CDE152A0047DCF4 /* KakaoSDKFriendResources.bundle */,
+				CB90ECBD2CA18F53007D673B /* KREAM_CloneCoding */,
+				CB90ECBC2CA18F53007D673B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CB90ECBC2CA18F53007D673B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CB90ECBB2CA18F53007D673B /* KREAM_CloneCoding.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CB90ECBA2CA18F53007D673B /* KREAM_CloneCoding */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CB90ECCE2CA18F55007D673B /* Build configuration list for PBXNativeTarget "KREAM_CloneCoding" */;
+			buildPhases = (
+				CB90ECB72CA18F53007D673B /* Sources */,
+				CB90ECB82CA18F53007D673B /* Frameworks */,
+				CB90ECB92CA18F53007D673B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				CB90ECBD2CA18F53007D673B /* KREAM_CloneCoding */,
+			);
+			name = KREAM_CloneCoding;
+			packageProductDependencies = (
+				CB0F799A2CA930FF00622685 /* SnapKit */,
+				CB0F7A0E2CABD2FB00622685 /* Then */,
+				CB280C382CDE09C00047DCF4 /* Alamofire */,
+				CB280C472CDE28210047DCF4 /* KakaoSDK */,
+				CB8E183A2CE7682600B3B77F /* CombineMoya */,
+				CB8E183C2CE7682600B3B77F /* Moya */,
+				CB8E183E2CE7682600B3B77F /* ReactiveMoya */,
+				CB8E18402CE7682600B3B77F /* RxMoya */,
+				CB5C0C8D2CEF416F00C447DE /* Kingfisher */,
+			);
+			productName = KREAM_CloneCoding;
+			productReference = CB90ECBB2CA18F53007D673B /* KREAM_CloneCoding.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CB90ECB32CA18F53007D673B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					CB90ECBA2CA18F53007D673B = {
+						CreatedOnToolsVersion = 16.0;
+					};
+				};
+			};
+			buildConfigurationList = CB90ECB62CA18F53007D673B /* Build configuration list for PBXProject "KREAM_CloneCoding" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CB90ECB22CA18F53007D673B;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				CB0F79992CA930FF00622685 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				CB0F7A0D2CABD2FB00622685 /* XCRemoteSwiftPackageReference "Then" */,
+				CB280C372CDE09C00047DCF4 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				CB280C462CDE28210047DCF4 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */,
+				CB8E18392CE7682600B3B77F /* XCRemoteSwiftPackageReference "Moya" */,
+				CB5C0C8C2CEF416F00C447DE /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = CB90ECBC2CA18F53007D673B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CB90ECBA2CA18F53007D673B /* KREAM_CloneCoding */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CB90ECB92CA18F53007D673B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB280C3E2CDE152A0047DCF4 /* KakaoSDKFriendResources.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CB90ECB72CA18F53007D673B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		CB90ECCF2CA18F55007D673B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReferenceAnchor = CB90ECBD2CA18F53007D673B /* KREAM_CloneCoding */;
+			baseConfigurationReferenceRelativePath = Config.xcconfig;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = X7TYNR98TC;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = KREAM_CloneCoding/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "kr.ac.indck.hyun.KREAM-CloneCoding";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CB90ECD02CA18F55007D673B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReferenceAnchor = CB90ECBD2CA18F53007D673B /* KREAM_CloneCoding */;
+			baseConfigurationReferenceRelativePath = Config.xcconfig;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = X7TYNR98TC;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = KREAM_CloneCoding/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "kr.ac.indck.hyun.KREAM-CloneCoding";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CB90ECD12CA18F55007D673B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReferenceAnchor = CB90ECBD2CA18F53007D673B /* KREAM_CloneCoding */;
+			baseConfigurationReferenceRelativePath = Config.xcconfig;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CB90ECD22CA18F55007D673B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReferenceAnchor = CB90ECBD2CA18F53007D673B /* KREAM_CloneCoding */;
+			baseConfigurationReferenceRelativePath = Config.xcconfig;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CB90ECB62CA18F53007D673B /* Build configuration list for PBXProject "KREAM_CloneCoding" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB90ECD12CA18F55007D673B /* Debug */,
+				CB90ECD22CA18F55007D673B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CB90ECCE2CA18F55007D673B /* Build configuration list for PBXNativeTarget "KREAM_CloneCoding" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB90ECCF2CA18F55007D673B /* Debug */,
+				CB90ECD02CA18F55007D673B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CB0F79992CA930FF00622685 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+		CB0F7A0D2CABD2FB00622685 /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+		CB280C372CDE09C00047DCF4 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.10.1;
+			};
+		};
+		CB280C462CDE28210047DCF4 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kakao/kakao-ios-sdk.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		CB5C0C8C2CEF416F00C447DE /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.1.1;
+			};
+		};
+		CB8E18392CE7682600B3B77F /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 15.0.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CB0F799A2CA930FF00622685 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CB0F79992CA930FF00622685 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		CB0F7A0E2CABD2FB00622685 /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CB0F7A0D2CABD2FB00622685 /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
+		};
+		CB280C382CDE09C00047DCF4 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CB280C372CDE09C00047DCF4 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		CB280C472CDE28210047DCF4 /* KakaoSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CB280C462CDE28210047DCF4 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDK;
+		};
+		CB5C0C8D2CEF416F00C447DE /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CB5C0C8C2CEF416F00C447DE /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		CB8E183A2CE7682600B3B77F /* CombineMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CB8E18392CE7682600B3B77F /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = CombineMoya;
+		};
+		CB8E183C2CE7682600B3B77F /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CB8E18392CE7682600B3B77F /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+		CB8E183E2CE7682600B3B77F /* ReactiveMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CB8E18392CE7682600B3B77F /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = ReactiveMoya;
+		};
+		CB8E18402CE7682600B3B77F /* RxMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CB8E18392CE7682600B3B77F /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = RxMoya;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = CB90ECB32CA18F53007D673B /* Project object */;
+}
