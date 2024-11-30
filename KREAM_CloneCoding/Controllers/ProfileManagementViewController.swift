@@ -65,27 +65,19 @@ class ProfileManagementViewController: UIViewController {
     
     // 아이디 변경 버튼 액션
     @objc func idChangeBtn(){
+        profileManagementView.changeInfo(flag: idFlag, info: .id)
+        idFlag = !idFlag
         if idFlag {
-            profileManagementView.changeId(idFlag: idFlag)
-            idFlag = false
-        }
-        else {
             userDefaluts.saveData(text: profileManagementView.grpUserEmail.txtUserInfo.text ?? "", key: "id")
-            profileManagementView.changeId(idFlag: idFlag)
-            idFlag = true
         }
     }
     
     // 비밀번호 변경 버튼 액션
     @objc func pwdChangeBtn() {
+        profileManagementView.changeInfo(flag: pwdFlag, info: .password)
+        pwdFlag = !pwdFlag
         if pwdFlag {
-            profileManagementView.changePwd(pwdFlag: pwdFlag)
-            pwdFlag = false
-        }
-        else {
             userDefaluts.saveData(text: profileManagementView.grpUserPwd.txtUserInfo.text ?? "", key: "pwd")
-            profileManagementView.changePwd(pwdFlag: pwdFlag)
-            pwdFlag = true
         }
     }
 }

@@ -17,8 +17,6 @@ public enum Service : String{
 class KeychainService {
     static let shared = KeychainService()
     
-    
-    
     @discardableResult
     func save(account: String, service: Service, token: String) -> OSStatus {
         let tokenData = token.data(using: .utf8)!  // 저장할 데이터: 문자열을 Data로 변환

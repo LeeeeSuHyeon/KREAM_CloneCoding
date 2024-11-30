@@ -79,27 +79,22 @@ class ProfileManagementView: UIView {
         profileImgView.image = viewData.image
     }
     
-    public func changeId(idFlag : Bool){
-        if idFlag {
-            grpUserEmail.txtUserInfo.text = ""
-            grpUserEmail.txtUserInfo.isUserInteractionEnabled = true
-            grpUserEmail.btnChangeInfo.setTitle("확인", for: .normal)
+    public func changeInfo(flag : Bool, info : Info){
+        let changedInfoView = info.rawValue == "id" ? self.grpUserEmail : self.grpUserPwd
+        if flag {
+            changedInfoView.txtUserInfo.text = ""
+            changedInfoView.txtUserInfo.isUserInteractionEnabled = true
+            changedInfoView.btnChangeInfo.setTitle("확인", for: .normal)
             
         }
         else {
-            grpUserEmail.txtUserInfo.isUserInteractionEnabled = false
-            grpUserEmail.btnChangeInfo.setTitle("변경", for: .normal)
+            changedInfoView.txtUserInfo.isUserInteractionEnabled = false
+            changedInfoView.btnChangeInfo.setTitle("변경", for: .normal)
         }
     }
-    public func changePwd(pwdFlag : Bool){
-        if pwdFlag {
-            grpUserPwd.txtUserInfo.text = ""
-            grpUserPwd.txtUserInfo.isUserInteractionEnabled = true
-            grpUserPwd.btnChangeInfo.setTitle("확인", for: .normal)
-        }
-        else {
-            grpUserPwd.txtUserInfo.isUserInteractionEnabled = false
-            grpUserPwd.btnChangeInfo.setTitle("변경", for: .normal)
-        }
-    }
+}
+
+public enum Info : String{
+    case id = "id"
+    case password = "password"
 }
