@@ -14,7 +14,7 @@ class SavedView: UIView {
         lbl.text = "Saved"
     }
     
-    public lazy var lblCount = UILabel().then { lbl in
+    private lazy var lblCount = UILabel().then { lbl in
         lbl.font = .systemFont(ofSize: 14)
     }
     
@@ -29,15 +29,19 @@ class SavedView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.backgroundColor = .white
+        setSubView()
         setUI()
     }
     
+    private func setSubView(){
+        [
+            lblTitle,
+            lblCount,
+            tableView
+        ].forEach{self.addSubview($0)}
+    }
+    
     private func setUI(){
-        self.addSubview(lblTitle)
-        self.addSubview(lblCount)
-        self.addSubview(tableView)
-        
-        
         lblTitle.snp.makeConstraints { make in
             make.leading.equalToSuperview().offset(10)
             make.top.equalToSuperview().offset(61)
