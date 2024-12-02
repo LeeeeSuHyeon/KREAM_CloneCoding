@@ -20,6 +20,7 @@ class SavedView: UIView {
     
     public lazy var tableView = UITableView().then { view in
         view.register(SavedCell.self, forCellReuseIdentifier: SavedCell.identifier)
+        view.separatorInset = UIEdgeInsets.zero
         view.separatorStyle = .singleLine   // 구분선
         view.separatorColor = .gray
         view.tintColor = .black

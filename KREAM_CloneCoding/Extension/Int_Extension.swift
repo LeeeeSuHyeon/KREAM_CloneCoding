@@ -15,4 +15,11 @@ extension Int {
         let won = numberFormatter.string(for: self) ?? ""
         return "\(won)"
     }
+    
+    func getWonString() -> String {
+        let numberFormatter : NumberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .decimal // 10진법
+        let won = numberFormatter.string(for: self) ?? ""
+        return "\(won)" + "원"
+    }
 }
