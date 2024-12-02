@@ -10,13 +10,14 @@ import UIKit
 class RecommendSearchCollectionViewCell: UICollectionViewCell {
     static let id = "RecommendSearchCollectionViewCell"
     
-    private let btnTitle = UIButton().then { btn in
-        btn.backgroundColor = UIColor(hex: "#F6F6F6")
-        btn.layer.cornerRadius = 20
-        btn.layer.borderWidth = 1
-        btn.layer.borderColor = UIColor(hex: "#ECECEC")?.cgColor
-        btn.clipsToBounds = true
-    
+    private let lblTitle = UILabel().then { lbl in
+        lbl.font = .systemFont(ofSize: 13)
+        lbl.backgroundColor = UIColor(hex: "#F6F6F6")
+        lbl.layer.cornerRadius = 20
+        lbl.layer.borderWidth = 1
+        lbl.layer.borderColor = UIColor(hex: "#ECECEC")?.cgColor
+        lbl.clipsToBounds = true
+        lbl.textAlignment = .center
     }
     
     override init(frame: CGRect) {
@@ -29,17 +30,15 @@ class RecommendSearchCollectionViewCell: UICollectionViewCell {
     }
     
     private func setUI(){
-        addSubview(btnTitle)
+        addSubview(lblTitle)
         
-        btnTitle.snp.makeConstraints { make in
+        lblTitle.snp.makeConstraints { make in
             make.edges.equalToSuperview()
             make.height.equalTo(32)
         }
     }
     
     public func config(title : String) {
-        btnTitle.setTitle(title, for: .normal)
-        btnTitle.setTitleColor(.black, for: .normal)
-        btnTitle.titleLabel?.font = .systemFont(ofSize: 13)
+        lblTitle.text = title
     }
 }

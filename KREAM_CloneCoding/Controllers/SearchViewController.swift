@@ -65,7 +65,8 @@ extension SearchViewController : UICollectionViewDataSource {
 
 extension SearchViewController : UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = min(items[indexPath.row].title.count * 13, 200)
-        return CGSize(width: width, height: 32)
+        let width = items[indexPath.row].title.getLabelWidth(fontSize: 13, fontWeight: .regular)
+        let padding : CGFloat = 20
+        return CGSize(width: width + padding, height: 32)
     }
 }
