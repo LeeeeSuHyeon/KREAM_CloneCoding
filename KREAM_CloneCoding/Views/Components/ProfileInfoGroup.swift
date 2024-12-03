@@ -8,10 +8,10 @@
 import UIKit
 
 class ProfileInfoGroup : UIStackView {
-    let info : ProfileInfo
+    private let info : ProfileInfo
     
-    let labelText : String
-    let textFieldPlaceHolder : String
+    private let labelText : String
+    private let textFieldPlaceHolder : String
     
     init(info: ProfileInfo) {
         self.info = info

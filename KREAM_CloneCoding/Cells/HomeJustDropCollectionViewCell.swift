@@ -127,7 +127,7 @@ class HomeJustDropCollectionViewCell: UICollectionViewCell {
     }
 
     
-    func config(item : HomeJustDropModel) {
+    public func config(item : HomeJustDropModel) {
         imageView.kf.setImage(with: URL(string: item.image), placeholder: UIImage(named: "jordan"))
         lblTitle.text = item.title
         lblSubTitle.text = item.subTitle

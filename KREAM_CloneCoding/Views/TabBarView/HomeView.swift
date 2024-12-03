@@ -19,7 +19,7 @@ class HomeView: UIView {
         btn.contentMode = .scaleAspectFit
     }
     
-    public lazy var grpTopSearchAlert = UIStackView().then { view in
+    private  lazy var grpTopSearchAlert = UIStackView().then { view in
         view.axis = .horizontal
         view.alignment = .center
         view.distribution = .fill
@@ -50,11 +50,11 @@ class HomeView: UIView {
         sc.apportionsSegmentWidthsByContent = true
     }
     
-    public lazy var scrollView = UIScrollView()
+    private lazy var scrollView = UIScrollView()
     
     private lazy var contentView = UIView()
     
-    public lazy var imgViewAd = UIImageView().then { view in
+    private lazy var imgViewAd = UIImageView().then { view in
         view.image = .ad.withRenderingMode(.alwaysOriginal)
         view.contentMode = UIView.ContentMode.scaleAspectFill // 추가
     }
@@ -70,7 +70,7 @@ class HomeView: UIView {
         view.backgroundColor = .clear
     }
     
-    public lazy var grpJustDrop = UIView()
+    private lazy var grpJustDrop = UIView()
     
     private lazy var lblJustDropTitle = UILabel().then { lbl in
         lbl.text = "Just Dropped"
@@ -95,7 +95,7 @@ class HomeView: UIView {
         view.backgroundColor = .clear
     }
     
-    public lazy var grpHappyLook = UIView()
+    private lazy var grpHappyLook = UIView()
     
     private lazy var lblHappyLookTitle = UILabel().then { lbl in
         lbl.text = "본격 한파대비! 연말 필수템 모음"
@@ -125,28 +125,42 @@ class HomeView: UIView {
         setUI()
     }
     
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     private func setSubView(){
-        addSubview(grpTopSearchAlert)
-        addSubview(segmentedControl)
-        addSubview(scrollView)
-        
-        grpTopSearchAlert.addArrangedSubview(txtSearch)
-        grpTopSearchAlert.addArrangedSubview(btnAlert)
-        
+        [
+            grpTopSearchAlert,
+            segmentedControl,
+            scrollView
+        ].forEach{self.addSubview($0)}
+
+        [
+            txtSearch,
+            btnAlert
+        ].forEach{grpTopSearchAlert.addArrangedSubview($0)}
+    
         scrollView.addSubview(contentView)
         
-        contentView.addSubview(imgViewAd)
-        contentView.addSubview(collectionView)
-        contentView.addSubview(grpJustDrop)
-        contentView.addSubview(grpHappyLook)
+        [
+            imgViewAd,
+            collectionView,
+            grpJustDrop,
+            grpHappyLook
+        ].forEach{contentView.addSubview($0)}
+
+        [
+            lblJustDropTitle,
+            lblJustDropSubTitle,
+            justDropCollectionView
+        ].forEach{grpJustDrop.addSubview($0)}
         
-        grpJustDrop.addSubview(lblJustDropTitle)
-        grpJustDrop.addSubview(lblJustDropSubTitle)
-        grpJustDrop.addSubview(justDropCollectionView)
-        
-        grpHappyLook.addSubview(lblHappyLookTitle)
-        grpHappyLook.addSubview(lblHappyLookSubTitle)
-        grpHappyLook.addSubview(happyLookCollectionView)
+        [
+            lblHappyLookTitle,
+            lblHappyLookSubTitle,
+            happyLookCollectionView
+        ].forEach{grpHappyLook.addSubview($0)}
     }
     
     private func setUI(){
@@ -249,9 +263,5 @@ class HomeView: UIView {
         let lineColor = UIColor(hex: "#F2F2F2") ?? .blue
         grpJustDrop.addTopBorder(color: lineColor, width: 1)
         grpHappyLook.addTopBorder(color: lineColor, width: 1)
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
 }

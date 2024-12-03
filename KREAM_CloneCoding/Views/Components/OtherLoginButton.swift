@@ -8,9 +8,9 @@
 import UIKit
 
 class OtherLoginButton : UIButton {
-    let title : String
-    let imageName : String
-    var config : UIButton.Configuration
+    private let title : String
+    private let imageName : String
+    private var config : UIButton.Configuration
 
     init(title: String, imageName: String) {
         self.title = title
@@ -20,6 +20,9 @@ class OtherLoginButton : UIButton {
         setButton()
     }
 
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     private func setButton(){
         config.image = UIImage(named: imageName)
@@ -41,9 +44,5 @@ class OtherLoginButton : UIButton {
         self.layer.cornerRadius = 10
         self.layer.borderColor = UIColor(hex: "#D3D3D3")?.cgColor
         
-    }
-
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
 }

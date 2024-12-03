@@ -110,6 +110,10 @@ class PurchaseView: UIView {
         setUI()
     }
     
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     private func setSubView() {
         [lblTitle,
          lblSubTitle,
@@ -119,14 +123,16 @@ class PurchaseView: UIView {
          lblItemDescription,
          collectionView,
          grpBottomView
-        ].forEach { view in
-            addSubview(view)
-        }
+        ].forEach { self.addSubview($0) }
         
-        grpBottomStackView.addArrangedSubview(btnExpressDelivery)
-        grpBottomStackView.addArrangedSubview(btnNormalDelivery)
+        [
+            btnExpressDelivery,
+            btnNormalDelivery
+        ].forEach{grpBottomStackView.addArrangedSubview($0)}
         
-        grpBottomView.addSubview(grpBottomStackView)
+        [
+            grpBottomStackView
+        ].forEach{grpBottomView.addSubview($0)}
     }
     
     private func setUI(){
@@ -207,9 +213,4 @@ class PurchaseView: UIView {
         let lineColor = UIColor(hex: "#F3F3F3") ?? .black
         grpBottomView.addTopBorder(color: lineColor, width: 2)
     }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
 }

@@ -123,20 +123,28 @@ class LoginView: UIView {
             imgViewLogo,
             grpLogin,
             grpOtherLogin
-        ].forEach { view in
-            addSubview(view)
-        }
+        ].forEach { self.addSubview($0) }
         
-        grpLogin.addArrangedSubview(grpId)
-        grpLogin.addArrangedSubview(grpPwd)
-        grpLogin.addArrangedSubview(btnLogin)
-        grpId.addArrangedSubview(lblId)
-        grpId.addArrangedSubview(txtId)
-        grpPwd.addArrangedSubview(lblPwd)
-        grpPwd.addArrangedSubview(txtPwd)
+        [
+            grpId,
+            grpPwd,
+            btnLogin
+        ].forEach{grpLogin.addArrangedSubview($0)}
         
-        grpOtherLogin.addArrangedSubview(btnKakao)
-        grpOtherLogin.addArrangedSubview(btnApple)
+        [
+            lblId,
+            txtId
+        ].forEach{grpId.addArrangedSubview($0)}
+        
+        [
+            lblPwd,
+            txtPwd
+        ].forEach{grpPwd.addArrangedSubview($0)}
+        
+        [
+            btnKakao,
+            btnApple
+        ].forEach{grpOtherLogin.addArrangedSubview($0)}
     }
     private func setUI(){
         // 로고 이미지 뷰

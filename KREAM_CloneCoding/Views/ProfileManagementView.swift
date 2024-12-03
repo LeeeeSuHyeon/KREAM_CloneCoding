@@ -39,16 +39,20 @@ class ProfileManagementView: UIView {
     }()
     
     // 유저 이메일 그룹
-    public lazy var grpUserEmail = ProfileInfoGroup(info: .email)
+    private lazy var grpUserEmail = ProfileInfoGroup(info: .email)
 
     // 유저 비밀번호 그룹
-    public lazy var grpUserPwd = ProfileInfoGroup(info: .password)
+    private lazy var grpUserPwd = ProfileInfoGroup(info: .password)
 
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         backgroundColor = .white
         setUI()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     private func setUI(){
@@ -68,11 +72,6 @@ class ProfileManagementView: UIView {
             make.leading.equalToSuperview().offset(20)
         }
     }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
     public func config(viewData : ProfileManagementViewData){
         grpUserEmail.txtUserInfo.text = viewData.id
         grpUserPwd.txtUserInfo.text = viewData.pwd

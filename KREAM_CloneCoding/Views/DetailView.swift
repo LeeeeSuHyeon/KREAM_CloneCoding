@@ -110,30 +110,49 @@ class DetailView: UIView {
         setUI()
     }
     
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     private func setSubView(){
-        addSubview(mainImgView)
-        addSubview(collectionView)
-        addSubview(lblTitle)
-        addSubview(lblPrice)
-        addSubview(lblItemName)
-        addSubview(lblItemDescrption)
-        addSubview(grpBottomBtn)
+        [
+            mainImgView,
+            collectionView,
+            lblTitle,
+            lblPrice,
+            lblItemName,
+            lblItemDescrption,
+            grpBottomBtn
+        ].forEach{self.addSubview($0)}
         
-        btnPurchase.addSubview(lblPurchaseTitle)
-        btnPurchase.addSubview(lblPurchasePrice)
-        btnPurchase.addSubview(lblPurcahseSubTitle)
-        btnSell.addSubview(lblSellTitle)
-        btnSell.addSubview(lblSellPrice)
-        btnSell.addSubview(lblSellSubTitle)
+        [
+            lblPurchaseTitle,
+            lblPurchasePrice,
+            lblPurcahseSubTitle,
+        ].forEach{btnPurchase.addSubview($0)}
+
+        [
+            lblSellTitle,
+            lblSellPrice,
+            lblSellSubTitle,
+        ].forEach{btnSell.addSubview($0)}
         
-        grpPurchaseSellBtn.addArrangedSubview(btnPurchase)
-        grpPurchaseSellBtn.addArrangedSubview(btnSell)
+        [
+            btnPurchase,
+            btnSell
+        ].forEach{grpPurchaseSellBtn.addArrangedSubview($0)}
+
+        [
+            btnSaved,
+            lblSaved
+        ].forEach{grpSaved.addSubview($0)}
+
         
-        grpSaved.addSubview(btnSaved)
-        grpSaved.addSubview(lblSaved)
-        
-        grpBottomBtn.addSubview(grpSaved)
-        grpBottomBtn.addSubview(grpPurchaseSellBtn)
+        [
+            grpSaved,
+            grpPurchaseSellBtn
+        ].forEach{grpBottomBtn.addSubview($0)}
         
     }
     
@@ -252,8 +271,5 @@ class DetailView: UIView {
         let lineColor = UIColor(hex: "#F3F3F3") ?? .black
         grpBottomBtn.addTopBorder(color: lineColor, width: 2)
     }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+
 }

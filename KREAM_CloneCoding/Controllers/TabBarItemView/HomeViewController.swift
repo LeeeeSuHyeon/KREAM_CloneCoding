@@ -8,9 +8,9 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-    let bannerData = HomeCVModel.dummy()
-    let justDropItems = HomeJustDropModel.dummy()
-    let happyLookItems = HomeHappyLookModel.dummy()
+    private let bannerData = HomeCVModel.dummy()
+    private let justDropItems = HomeJustDropModel.dummy()
+    private let happyLookItems = HomeHappyLookModel.dummy()
 
     private lazy var homeView = HomeView()
     

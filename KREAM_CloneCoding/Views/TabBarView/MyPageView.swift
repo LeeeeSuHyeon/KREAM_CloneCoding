@@ -147,6 +147,11 @@ class MyPageView: UIView {
         setUI()
     }
     
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    
     
     private func setUI(){
         self.addSubview(grpTopView)
@@ -175,34 +180,12 @@ class MyPageView: UIView {
         grpTopBtn.snp.makeConstraints { make in
             make.width.equalTo(328)
         }
-        
-        // 프로필 프레임
-        grpProfile.snp.makeConstraints { make in
-//            make.leading.equalToSuperview()
-//            make.width.equalTo(221)
-        }
-        
+
         // 프로필 이미지
         profileImgView.snp.makeConstraints { make in
             make.width.height.equalTo(90)
         }
-        
-        // 프로필 텍스트 프레임
-        grpProfileText.snp.makeConstraints { make in
-//            make.top.bottom.equalTo(16)
-//            make.width.equalTo(115)
-        }
-        
-        // 프로필 이름
-//        lblProfileName.snp.makeConstraints { make in
-//            make.width.equalTo(115)
-//        }
-        
-        // 팔로우, 팔로잉 그룹
-        grpProfileFollow.snp.makeConstraints { make in
-//            make.width.equalTo(115)
-        }
-        
+
         // 프로필 버튼 그룹
         grpProfileBtn.snp.makeConstraints { make in
             make.leading.trailing.bottom.equalToSuperview()
@@ -220,11 +203,7 @@ class MyPageView: UIView {
             make.height.equalTo(26)
         }
     }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
+
     public func config(viewData : MyPageViewData){
         profileImgView.image = viewData.image
         lblProfileName.text = viewData.nickname

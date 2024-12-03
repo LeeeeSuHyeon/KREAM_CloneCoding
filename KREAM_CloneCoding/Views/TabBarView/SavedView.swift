@@ -33,6 +33,10 @@ class SavedView: UIView {
         setUI()
     }
     
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     private func setSubView(){
         [
             lblTitle,
@@ -62,8 +66,5 @@ class SavedView: UIView {
         lblCount.text = "전체 \(viewData.count)개"
     }
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
 }
 
