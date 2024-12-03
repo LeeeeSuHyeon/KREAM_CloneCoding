@@ -10,7 +10,7 @@ import UIKit
 class DetailViewCollectionViewCell: UICollectionViewCell {
     static let identifier = "DetailViewCollectionViewCell"
     
-    lazy var imageView = UIImageView().then { view in
+    private lazy var imageView = UIImageView().then { view in
         view.layer.borderWidth = 1
         view.layer.borderColor = UIColor(hex: "#E9E9E9")?.cgColor
     }
@@ -40,5 +40,4 @@ class DetailViewCollectionViewCell: UICollectionViewCell {
     func config(image : UIImage) {
         imageView.image = image
     }
-
 }

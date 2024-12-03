@@ -8,7 +8,7 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-    let data = HomeCVModel.dummy()
+    let bannerData = HomeCVModel.dummy()
     let justDropItems = HomeJustDropModel.dummy()
     let happyLookItems = HomeHappyLookModel.dummy()
 
@@ -68,13 +68,13 @@ extension HomeViewController : UICollectionViewDataSource, UICollectionViewDeleg
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch collectionView {
         case homeView.collectionView :
-            return data.count
+            return bannerData.count
         case homeView.justDropCollectionView :
             return justDropItems.count
         case homeView.happyLookCollectionView :
             return happyLookItems.count
         default:
-            return data.count
+            return bannerData.count
         }
         
     }
@@ -86,9 +86,8 @@ extension HomeViewController : UICollectionViewDataSource, UICollectionViewDeleg
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeCollectionViewCell.identifier, for: indexPath) as? HomeCollectionViewCell else {
                 return UICollectionViewCell()
             }
-            cell.imgView.image = data[indexPath.row].image
-            cell.lblTitle.text = data[indexPath.row].title
-            
+
+            cell.config(image: bannerData[indexPath.row].image, title: bannerData[indexPath.row].title)
             return cell
             
         case homeView.justDropCollectionView :

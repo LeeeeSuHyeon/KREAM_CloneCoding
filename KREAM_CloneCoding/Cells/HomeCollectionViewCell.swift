@@ -10,11 +10,11 @@ import UIKit
 class HomeCollectionViewCell: UICollectionViewCell {
     static let identifier = "HomeCollectionViewCell"
     
-    public lazy var imgView = UIImageView().then { view in
+    private lazy var imgView = UIImageView().then { view in
         view.contentMode = .scaleAspectFit
     }
     
-    public lazy var lblTitle = UILabel().then { lbl in
+    private lazy var lblTitle = UILabel().then { lbl in
         lbl.font = .systemFont(ofSize: 11.5)
         lbl.textColor = .black
     }
@@ -46,6 +46,11 @@ class HomeCollectionViewCell: UICollectionViewCell {
             make.bottom.equalToSuperview()
             make.centerX.equalToSuperview()
         }
+    }
+    
+    public func config(image : UIImage, title : String){
+        imgView.image = image
+        lblTitle.text = title
     }
 
 }
