@@ -24,6 +24,15 @@ class HomeCollectionViewCell: UICollectionViewCell {
         setUI()
     }
     
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        imgView.image = nil
+    }
+    
     private func setUI() {
         addSubview(imgView)
         addSubview(lblTitle)
@@ -38,8 +47,5 @@ class HomeCollectionViewCell: UICollectionViewCell {
             make.centerX.equalToSuperview()
         }
     }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+
 }

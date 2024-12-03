@@ -45,21 +45,44 @@ class HomeJustDropCollectionViewCell: UICollectionViewCell {
         lbl.textColor = UIColor(hex: "#A2A2A2")
     }
     
-    private lazy var grpDescription = UIView().then { view in
+    private lazy var grpDescription = UIView()
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setSubView()
+        setUI()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        imageView.image = nil
+        lblTitle.text = nil
+        lblSubTitle.text = nil
+        lblDeal.text = nil
+        lblPrice.text = nil        
+    }
+    
+    private func setSubView(){
+        [
+            lblTitle,
+            lblSubTitle,
+            lblPrice,
+            lblOrder
+        ].forEach{self.grpDescription.addSubview($0)}
         
+        [
+            imageView,
+            lblDeal,
+            btnSaved,
+            grpDescription
+        ].forEach{self.addSubview($0)}
     }
     
     private func setUI(){
-        grpDescription.addSubview(lblTitle)
-        grpDescription.addSubview(lblSubTitle)
-        grpDescription.addSubview(lblPrice)
-        grpDescription.addSubview(lblOrder)
-        
-        addSubview(imageView)
-        addSubview(lblDeal)
-        addSubview(btnSaved)
-        addSubview(grpDescription)
-        
         imageView.snp.makeConstraints { make in
             make.leading.top.equalToSuperview()
             make.width.equalToSuperview()
@@ -83,7 +106,6 @@ class HomeJustDropCollectionViewCell: UICollectionViewCell {
             make.top.equalTo(imageView.snp.bottom).offset(8)
             make.leading.equalToSuperview().inset(4)
             make.width.equalTo(124)
-//            make.bottom.equalToSuperview()
         }
         
         lblTitle.snp.makeConstraints { make in
@@ -103,15 +125,7 @@ class HomeJustDropCollectionViewCell: UICollectionViewCell {
             make.leading.bottom.equalToSuperview()
         }
     }
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        setUI()
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+
     
     func config(item : HomeJustDropModel) {
         imageView.kf.setImage(with: URL(string: item.image), placeholder: UIImage(named: "jordan"))

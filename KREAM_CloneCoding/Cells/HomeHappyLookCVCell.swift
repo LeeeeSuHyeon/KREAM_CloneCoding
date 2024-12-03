@@ -16,7 +16,6 @@ class HomeHappyLookCVCell: UICollectionViewCell {
         view.layer.masksToBounds = true
         view.layer.cornerRadius = 8
         view.contentMode = .scaleAspectFill
-        
     }
     
     public lazy var lblId = UILabel().then { lbl in
@@ -29,6 +28,17 @@ class HomeHappyLookCVCell: UICollectionViewCell {
         
         setUI()
     }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        imgView.image = nil
+        lblId.text = nil
+    }
+    
     
     private func setUI() {
         addSubview(imgView)
@@ -44,10 +54,6 @@ class HomeHappyLookCVCell: UICollectionViewCell {
             make.leading.equalToSuperview().offset(10)
             make.bottom.equalToSuperview().inset(11)
         }
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
     
     func config(item : HomeHappyLookModel) {

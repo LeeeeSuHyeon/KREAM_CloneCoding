@@ -29,6 +29,11 @@ class RecommendSearchCollectionViewCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        lblTitle.text = nil
+    }
+    
     private func setUI(){
         addSubview(lblTitle)
         

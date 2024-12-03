@@ -10,34 +10,51 @@ import UIKit
 class PurchaseCollectionViewCell: UICollectionViewCell {
     static let identifier = "PurchaseCollectionViewCell"
     
-    public lazy var grpView = UIView().then { view in
+    private lazy var grpView = UIView().then { view in
         view.layer.cornerRadius = 10
         view.layer.borderWidth = 1
         view.layer.borderColor = UIColor(hex: "#F2F2F2")?.cgColor
     }
     
-    public lazy var lblSize = UILabel().then { lbl in
-//        lbl.text = "size"
+    private lazy var lblSize = UILabel().then { lbl in
         lbl.font = .systemFont(ofSize: 14)
     }
     
-    public lazy var lblPrice = UILabel().then { lbl in
-//        lbl.text = "10,000"
+    private lazy var lblPrice = UILabel().then { lbl in
         lbl.font = .systemFont(ofSize: 12)
         lbl.textColor = UIColor(hex: "#D95A5D")
     }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
+        setSubView()
         setUI()
     }
     
-    private func setUI(){
-        addSubview(grpView)
-        grpView.addSubview(lblSize)
-        grpView.addSubview(lblPrice)
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
         
+        self.lblSize.text = nil
+        self.lblPrice.text = nil
+    }
+    
+    private func setSubView(){
+        [
+            lblSize,
+            lblPrice
+        ].forEach{grpView.addSubview($0)}
+        
+        [
+            grpView
+        ].forEach{self.addSubview($0)}
+    }
+    
+    private func setUI(){
+
         grpView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
@@ -53,18 +70,18 @@ class PurchaseCollectionViewCell: UICollectionViewCell {
         }
     }
     
-    func config(size : String, price : Int) {
+    public func config(size : String, price : Int) {
         self.lblSize.text = size
         self.lblPrice.text = price.setWon()
     }
     
-    func setBoldCell() {
+    public func setBoldCell() {
         boldLabel(label: lblSize, size: 14, isBold: true)
         boldLabel(label: lblPrice, size: 12, isBold: true)
         borderView(isBold: true)
     }
     
-    func setBasicCell() {
+    public func setBasicCell() {
         boldLabel(label: lblSize, size: 14, isBold: false)
         boldLabel(label: lblPrice, size: 12, isBold: false)
         borderView(isBold: false)
@@ -95,9 +112,5 @@ class PurchaseCollectionViewCell: UICollectionViewCell {
         } else {
             grpView.layer.borderColor = UIColor(hex: "#F2F2F2")?.cgColor
         }
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
 }
