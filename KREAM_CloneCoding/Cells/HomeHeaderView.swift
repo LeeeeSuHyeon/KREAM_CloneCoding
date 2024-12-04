@@ -1,5 +1,5 @@
 //
-//  HomeHeaderCell.swift
+//  HomeHeaderView.swift
 //  KREAM_CloneCoding
 //
 //  Created by 이수현 on 12/4/24.
@@ -7,8 +7,8 @@
 
 import UIKit
 
-class HomeHeaderCell : UICollectionReusableView {
-    static let id = "HomeHeaderCell"
+class HomeHeaderView : UICollectionReusableView {
+    static let id = "HomeHeaderView"
     
     private let lblTitle = UILabel().then { lbl in
         lbl.font = .systemFont(ofSize: 16, weight: .bold)

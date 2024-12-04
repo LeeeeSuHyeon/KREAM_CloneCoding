@@ -57,6 +57,9 @@ class HomeView: UIView {
         view.register(HomeRecmmendationCell.self, forCellWithReuseIdentifier: HomeRecmmendationCell.identifier)
         view.register(HomeJustDropCollectionViewCell.self, forCellWithReuseIdentifier: HomeJustDropCollectionViewCell.identifier)
         view.register(HomeHappyLookCVCell.self, forCellWithReuseIdentifier: HomeHappyLookCVCell.identifier)
+        
+        view.register(HomeHeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HomeHeaderView.id)
+        view.register(HomeFooterView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: HomeFooterView.id)
     }
     
     override init(frame: CGRect) {
@@ -73,7 +76,7 @@ class HomeView: UIView {
     
     private func createLayout() -> UICollectionViewCompositionalLayout{
         let config = UICollectionViewCompositionalLayoutConfiguration()
-        config.interSectionSpacing = 10
+        config.interSectionSpacing = 20
         
         return UICollectionViewCompositionalLayout(sectionProvider: {[weak self] sectionIndex, _ in
             let section = self?.dataSource?.sectionIdentifier(for: sectionIndex)
@@ -117,36 +120,61 @@ class HomeView: UIView {
         let section = NSCollectionLayoutSection(group: group)
         section.interGroupSpacing = 20
         section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 15, bottom: 0, trailing: 15)
+        
+        let footer = createFooterView()
+        section.boundarySupplementaryItems = [footer]
 
         return section
     }
     
     private func createProductSection() -> NSCollectionLayoutSection {
-        let itemSize = NSCollectionLayoutSize(widthDimension: .absolute(142), heightDimension: .fractionalHeight(1.0))
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(1.0))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         
         // 하나의 아이템이 하나의 그룹
-        let groupSize = NSCollectionLayoutSize(widthDimension: .absolute(152), heightDimension: .absolute(237))
+        let groupSize = NSCollectionLayoutSize(widthDimension: .absolute(142), heightDimension: .absolute(237))
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
         
         let section = NSCollectionLayoutSection(group: group)
         section.orthogonalScrollingBehavior = .continuous
         section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 15, bottom: 0, trailing: 15)
+
+        let header = createHeaderView()
+        let footer = createFooterView()
+        section.boundarySupplementaryItems = [header, footer]
+        
         return section
     }
     
     private func createUserStorySection() -> NSCollectionLayoutSection{
-        let itemSize = NSCollectionLayoutSize(widthDimension: .absolute(124), heightDimension: .fractionalHeight(1.0))
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(1.0))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         
-        let groupSize = NSCollectionLayoutSize(widthDimension: .absolute(130), heightDimension: .absolute(165))
+        let groupSize = NSCollectionLayoutSize(widthDimension: .absolute(124), heightDimension: .absolute(165))
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
         
         let section = NSCollectionLayoutSection(group: group)
         section.orthogonalScrollingBehavior = .continuous
         section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 15, bottom: 0, trailing: 15)
+        section.interGroupSpacing = 8
         
+        let header = createHeaderView()
+        let footer = createFooterView()
+        section.boundarySupplementaryItems = [header, footer]
+    
         return section
+    }
+    
+    private func createHeaderView() -> NSCollectionLayoutBoundarySupplementaryItem {
+        let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(60))
+        let header = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: headerSize, elementKind: UICollectionView.elementKindSectionHeader, alignment: .topLeading)
+        return header
+    }
+    
+    private func createFooterView() -> NSCollectionLayoutBoundarySupplementaryItem{
+        let footerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.1), heightDimension: .absolute(30))
+        let footer = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: footerSize, elementKind: UICollectionView.elementKindSectionFooter, alignment: .bottom)
+        return footer
     }
     
     private func setSubView(){

@@ -27,7 +27,7 @@ class HomeFooterView : UICollectionReusableView {
         addSubview(lineView)
         
         lineView.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
+            make.horizontalEdges.bottom.equalToSuperview()
             make.height.equalTo(1)
         }
     }

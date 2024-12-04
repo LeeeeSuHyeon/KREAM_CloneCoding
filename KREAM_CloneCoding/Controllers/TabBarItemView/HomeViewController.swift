@@ -27,16 +27,8 @@ class HomeViewController: UIViewController {
         setDataSource()
         setSnapShot()
         setupAction()
-        setupDelegate()
-        
     }
     
-    private func setupDelegate() {
-//                homeView.collectionView.dataSource = self
-        //        homeView.justDropCollectionView.delegate = self
-        //        homeView.justDropCollectionView.dataSource = self
-        //        homeView.happyLookCollectionView.dataSource = self
-    }
     
     
     private func setupAction() {
@@ -80,8 +72,46 @@ class HomeViewController: UIViewController {
             }
         })
         
+        
+        dataSource?.supplementaryViewProvider = {[weak self] collectionView, kind, indexPath in
+            let section = self?.dataSource?.sectionIdentifier(for: indexPath.section)
+            switch section {
+            case .banner:
+                return self?.getReusableView(collectionView: collectionView, kind: kind, indexPath: indexPath)
+            case .recommendation:
+                return self?.getReusableView(collectionView: collectionView, kind: kind, indexPath: indexPath)
+            case .product(let headerInfo):
+                return self?.getReusableView(collectionView: collectionView, kind: kind, indexPath: indexPath, headerInfo: headerInfo)
+            case .userStory(let headerInfo):
+                return self?.getReusableView(collectionView: collectionView, kind: kind, indexPath: indexPath, headerInfo: headerInfo)
+            default :
+                return UICollectionReusableView()
+            }
+        }
+        
         if let dataSource = dataSource {
             homeView.config(dataSource: dataSource)
+        }
+    }
+    
+    
+    private func getReusableView(collectionView: UICollectionView, kind: String, indexPath: IndexPath, headerInfo: HeaderInfo? = nil) -> UICollectionReusableView{
+        switch kind {
+        case UICollectionView.elementKindSectionHeader :
+            guard let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: HomeHeaderView.id, for: indexPath) as? HomeHeaderView, let headerInfo = headerInfo
+            else {
+                return UICollectionReusableView()
+            }
+            header.config(title: headerInfo.title, subTitle: headerInfo.subTitle)
+            return header
+            
+        case UICollectionView.elementKindSectionFooter :
+            guard let footer = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: HomeFooterView.id, for: indexPath) as? HomeFooterView else {
+                return UICollectionReusableView()
+            }
+            return footer
+        default:
+            return UICollectionReusableView()
         }
     }
     
