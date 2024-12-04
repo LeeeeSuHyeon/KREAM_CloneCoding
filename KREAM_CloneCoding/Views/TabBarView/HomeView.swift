@@ -8,19 +8,7 @@
 import UIKit
 
 
-public enum Section : Hashable {
-    case banner
-    case recommendation
-    case product
-    case userStory
-}
 
-public enum Item : Hashable {
-    case bannerItem(HomeAdModel)
-    case recommendationItem(HomeRecommendationModel)
-    case productItem(HomeJustDropModel)
-    case userStoryItem(HomeHappyLookModel)
-}
 
 class HomeView: UIView {
     private var dataSource : UICollectionViewDiffableDataSource<Section, Item>?

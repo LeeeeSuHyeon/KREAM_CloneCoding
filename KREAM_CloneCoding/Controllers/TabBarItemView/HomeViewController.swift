@@ -77,9 +77,6 @@ class HomeViewController: UIViewController {
                 }
                 cell.config(item: items)
                 return cell
-                
-            default :
-                return UICollectionViewCell()
             }
         })
         
@@ -97,10 +94,12 @@ class HomeViewController: UIViewController {
         let recommendationSection = Section.recommendation
         let recommendationItem = recommendationItems.map{Item.recommendationItem($0)}
         
-        let productSection = Section.product
+        let productHeader = HeaderInfo(title: "Just Dropped", subTitle: "발매 상품")
+        let productSection = Section.product(productHeader)
         let productItem = justDropItems.map{Item.productItem($0)}
         
-        let userStorySection = Section.userStory
+        let userStoryHeader = HeaderInfo(title: "본격 한파대비! 연말 필수템 모음", subTitle: "#해피홀리룩챌린지")
+        let userStorySection = Section.userStory(userStoryHeader)
         let userStoryItem = happyLookItems.map{Item.userStoryItem($0)}
         
         snapShot.appendSections([bannerSection, recommendationSection, productSection, userStorySection])
