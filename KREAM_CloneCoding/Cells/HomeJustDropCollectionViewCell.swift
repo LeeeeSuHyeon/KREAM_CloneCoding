@@ -10,42 +10,42 @@ import UIKit
 class HomeJustDropCollectionViewCell: UICollectionViewCell {
     static let identifier = "HomeJustDropCollectionViewCell"
     
-    private lazy var imageView = UIImageView().then { view in
+    private var imageView = UIImageView().then { view in
         view.contentMode = .scaleAspectFit
     }
     
-    private lazy var lblDeal = UILabel().then { lbl in
+    private var lblDeal = UILabel().then { lbl in
         lbl.font = .systemFont(ofSize: 10)
     }
     
-    private lazy var btnSaved = UIButton().then { btn in
+    private var btnSaved = UIButton().then { btn in
         btn.tintColor = .black
     }
     
-    private lazy var lblTitle = UILabel().then { lbl in
+    private var lblTitle = UILabel().then { lbl in
         lbl.font = .systemFont(ofSize: 12, weight: .bold)
         lbl.lineBreakMode = .byTruncatingTail
         lbl.numberOfLines = 1
     }
     
-    private lazy var lblSubTitle = UILabel().then { lbl in
+    private var lblSubTitle = UILabel().then { lbl in
         lbl.font = .systemFont(ofSize: 12)
         lbl.lineBreakMode = .byWordWrapping
         lbl.numberOfLines = 2
     }
     
-    private lazy var lblPrice = UILabel().then { lbl in
+    private var lblPrice = UILabel().then { lbl in
         lbl.font = .systemFont(ofSize: 13, weight: .bold)
         lbl.numberOfLines = 1
     }
     
-    private lazy var lblOrder = UILabel().then { lbl in
+    private var lblOrder = UILabel().then { lbl in
         lbl.text = "즉시 구매가"
         lbl.font = .systemFont(ofSize: 10)
         lbl.textColor = UIColor(hex: "#A2A2A2")
     }
     
-    private lazy var grpDescription = UIView()
+    private var grpDescription = UIView()
     
     override init(frame: CGRect) {
         super.init(frame: frame)

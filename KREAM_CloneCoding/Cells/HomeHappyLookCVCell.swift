@@ -11,14 +11,14 @@ import Kingfisher
 class HomeHappyLookCVCell: UICollectionViewCell {
     static let identifier = "HomeHappyLookCVCell"
     
-    private lazy var imgView = UIImageView().then { view in
+    private var imgView = UIImageView().then { view in
         view.layer.borderColor = UIColor.clear.cgColor
         view.layer.masksToBounds = true
         view.layer.cornerRadius = 8
         view.contentMode = .scaleAspectFill
     }
     
-    private lazy var lblId = UILabel().then { lbl in
+    private var lblId = UILabel().then { lbl in
         lbl.font = .systemFont(ofSize: 12, weight: .semibold)
         lbl.textColor = .white
     }
@@ -45,9 +45,7 @@ class HomeHappyLookCVCell: UICollectionViewCell {
         addSubview(lblId)
         
         imgView.snp.makeConstraints { make in
-            make.leading.top.equalToSuperview()
-            make.width.equalTo(124)
-            make.height.equalTo(165)
+            make.edges.equalToSuperview()
         }
         
         lblId.snp.makeConstraints { make in

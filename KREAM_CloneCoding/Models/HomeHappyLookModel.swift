@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-struct HomeHappyLookModel {
+public struct HomeHappyLookModel : Hashable{
     var image : String
     var id : String
 }

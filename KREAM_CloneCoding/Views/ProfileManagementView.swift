@@ -39,10 +39,10 @@ class ProfileManagementView: UIView {
     }()
     
     // 유저 이메일 그룹
-    private lazy var grpUserEmail = ProfileInfoGroup(info: .email)
+    public lazy var grpUserEmail = ProfileInfoGroup(info: .email)
 
     // 유저 비밀번호 그룹
-    private lazy var grpUserPwd = ProfileInfoGroup(info: .password)
+    public lazy var grpUserPwd = ProfileInfoGroup(info: .password)
 
     
     override init(frame: CGRect) {

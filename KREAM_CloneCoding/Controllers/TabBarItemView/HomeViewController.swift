@@ -8,37 +8,40 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-    private let bannerData = HomeCVModel.dummy()
+    private let bannerItems = HomeAdModel.dummy()
+    private let recommendationItems = HomeRecommendationModel.dummy()
     private let justDropItems = HomeJustDropModel.dummy()
     private let happyLookItems = HomeHappyLookModel.dummy()
-
+    
+    private var dataSource : UICollectionViewDiffableDataSource<Section, Item>?
+    
     private lazy var homeView = HomeView()
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.navigationBar.isHidden = true
     }
-        
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view = homeView
-
+        setDataSource()
+        setSnapShot()
         setupAction()
         setupDelegate()
         
     }
     
     private func setupDelegate() {
-        homeView.collectionView.delegate = self
-        homeView.collectionView.dataSource = self
-        homeView.justDropCollectionView.delegate = self
-        homeView.justDropCollectionView.dataSource = self
-        homeView.happyLookCollectionView.dataSource = self
+//                homeView.collectionView.dataSource = self
+        //        homeView.justDropCollectionView.delegate = self
+        //        homeView.justDropCollectionView.dataSource = self
+        //        homeView.happyLookCollectionView.dataSource = self
     }
     
     
     private func setupAction() {
         homeView.txtSearch.addTarget(self, action: #selector(txtSearchDidTap), for: .editingDidBegin)
-        homeView.segmentedControl.addTarget(self, action: #selector(segmentedControlValueChanged(segment : )), for: .valueChanged)
+//        homeView.segmentedControl.addTarget(self, action: #selector(segmentedControlValueChanged(segment : )), for: .valueChanged)
     }
     
     @objc func txtSearchDidTap() {
@@ -47,77 +50,66 @@ class HomeViewController: UIViewController {
         self.present(nextVC, animated: true)
     }
     
-    
-    @objc private func segmentedControlValueChanged(segment : UISegmentedControl){
-        switch segment.selectedSegmentIndex {
-        case 0 :
-            homeView.scrollView.isHidden = false
-        default:
-            homeView.scrollView.isHidden = true
-        }
-    }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        homeView.setTapBorder()
-    }
-    
-}
-
-extension HomeViewController : UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        switch collectionView {
-        case homeView.collectionView :
-            return bannerData.count
-        case homeView.justDropCollectionView :
-            return justDropItems.count
-        case homeView.happyLookCollectionView :
-            return happyLookItems.count
-        default:
-            return bannerData.count
-        }
-        
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-        switch collectionView {
-        case homeView.collectionView :
-            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeCollectionViewCell.identifier, for: indexPath) as? HomeCollectionViewCell else {
+    private func setDataSource(){
+        dataSource = UICollectionViewDiffableDataSource<Section, Item>(collectionView: homeView.collectionView, cellProvider: { collectionView, indexPath, item in
+            switch item {
+            case .bannerItem(let items):
+                guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeAdBannerCell.id, for: indexPath) as? HomeAdBannerCell else {
+                    return UICollectionViewCell()
+                }
+                cell.config(imageURL: items.imageURL)
+                return cell
+            case .recommendationItem(let items):
+                guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeRecmmendationCell.identifier, for: indexPath) as? HomeRecmmendationCell else {
+                    return UICollectionViewCell()
+                }
+                cell.config(image: items.image, title: items.title)
+                return cell
+            case .productItem(let items) :
+                guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeJustDropCollectionViewCell.identifier, for: indexPath) as? HomeJustDropCollectionViewCell else {
+                    return UICollectionViewCell()
+                }
+                cell.config(item: items)
+                return cell
+            case .userStoryItem(let items) :
+                guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeHappyLookCVCell.identifier, for: indexPath) as? HomeHappyLookCVCell else {
+                    return UICollectionViewCell()
+                }
+                cell.config(item: items)
+                return cell
+                
+            default :
                 return UICollectionViewCell()
             }
-
-            cell.config(image: bannerData[indexPath.row].image, title: bannerData[indexPath.row].title)
-            return cell
-            
-        case homeView.justDropCollectionView :
-            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeJustDropCollectionViewCell.identifier, for: indexPath) as? HomeJustDropCollectionViewCell else {
-                return UICollectionViewCell()
-            }
-            cell.config(item: justDropItems[indexPath.row])
-            return cell
-        case homeView.happyLookCollectionView :
-            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeHappyLookCVCell.identifier, for: indexPath) as? HomeHappyLookCVCell
-            else {
-                return UICollectionViewCell()
-            }
-            cell.config(item: happyLookItems[indexPath.row])
-            return cell
-        default:
-            return UICollectionViewCell()
-        }
+        })
         
+        if let dataSource = dataSource {
+            homeView.config(dataSource: dataSource)
+        }
     }
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        switch collectionView {
-        case homeView.justDropCollectionView :
-            let nextVC = DetailViewController(item: justDropItems[indexPath.row])
-            nextVC.hidesBottomBarWhenPushed = true
-            self.navigationController?.navigationBar.isHidden = false
-            navigationController?.pushViewController(nextVC, animated: true)
-        default:
-            return
-        }
+    private func setSnapShot(){
+        var snapShot = NSDiffableDataSourceSnapshot<Section, Item>()
+        
+        let bannerSection = Section.banner
+        let bannerItem = bannerItems.map{Item.bannerItem($0)}
+        
+        let recommendationSection = Section.recommendation
+        let recommendationItem = recommendationItems.map{Item.recommendationItem($0)}
+        
+        let productSection = Section.product
+        let productItem = justDropItems.map{Item.productItem($0)}
+        
+        let userStorySection = Section.userStory
+        let userStoryItem = happyLookItems.map{Item.userStoryItem($0)}
+        
+        snapShot.appendSections([bannerSection, recommendationSection, productSection, userStorySection])
+        
+        snapShot.appendItems(bannerItem, toSection: bannerSection)
+        snapShot.appendItems(recommendationItem, toSection: recommendationSection)
+        snapShot.appendItems(productItem, toSection: productSection)
+        snapShot.appendItems(userStoryItem, toSection: userStorySection)
+        
+        self.dataSource?.apply(snapShot)
     }
 }
